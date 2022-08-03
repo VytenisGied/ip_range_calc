@@ -174,4 +174,5 @@ end
 SplitIP1 = Split(Ips[1], Delimiter)
 SplitIP2 = Split(Ips[2], Delimiter)
 
+--* Compare ip addresses
 print(CompareIPs(Mode, SplitIP1, SplitIP2))
