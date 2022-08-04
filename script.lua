@@ -63,7 +63,11 @@ function Split(s, delimiter)
   end
   local t = {}
   for str in string.gmatch(s, "([^" .. delimiter .. "]+)") do
-    table.insert(t, str)
+    if Mode == "ipv4" then
+        table.insert(t, tonumber(str, 10))
+    else
+        table.insert(t, tonumber(str, 16))
+    end
   end
   return t
 end
